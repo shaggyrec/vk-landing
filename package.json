@@ -11,7 +11,7 @@
     "predeploy": "npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alexander Shogenov <i@shagg.ru>",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^7.0.3",
