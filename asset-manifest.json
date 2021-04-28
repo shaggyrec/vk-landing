@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/vk-landing/static/js/main.ce394c10.chunk.js",
-    "main.js.map": "/vk-landing/static/js/main.ce394c10.chunk.js.map",
+    "main.js": "/vk-landing/static/js/main.e18c7f68.chunk.js",
+    "main.js.map": "/vk-landing/static/js/main.e18c7f68.chunk.js.map",
     "runtime-main.js": "/vk-landing/static/js/runtime-main.70c64e00.js",
     "runtime-main.js.map": "/vk-landing/static/js/runtime-main.70c64e00.js.map",
     "static/css/2.a2ab3232.chunk.css": "/vk-landing/static/css/2.a2ab3232.chunk.css",
-    "static/js/2.bd7df50a.chunk.js": "/vk-landing/static/js/2.bd7df50a.chunk.js",
-    "static/js/2.bd7df50a.chunk.js.map": "/vk-landing/static/js/2.bd7df50a.chunk.js.map",
+    "static/js/2.17057210.chunk.js": "/vk-landing/static/js/2.17057210.chunk.js",
+    "static/js/2.17057210.chunk.js.map": "/vk-landing/static/js/2.17057210.chunk.js.map",
     "index.html": "/vk-landing/index.html",
     "static/css/2.a2ab3232.chunk.css.map": "/vk-landing/static/css/2.a2ab3232.chunk.css.map",
-    "static/js/2.bd7df50a.chunk.js.LICENSE.txt": "/vk-landing/static/js/2.bd7df50a.chunk.js.LICENSE.txt"
+    "static/js/2.17057210.chunk.js.LICENSE.txt": "/vk-landing/static/js/2.17057210.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.70c64e00.js",
     "static/css/2.a2ab3232.chunk.css",
-    "static/js/2.bd7df50a.chunk.js",
-    "static/js/main.ce394c10.chunk.js"
+    "static/js/2.17057210.chunk.js",
+    "static/js/main.e18c7f68.chunk.js"
   ]
 }
