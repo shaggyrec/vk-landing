@@ -23,7 +23,7 @@ async function allowMessages() {
 (async () => {
     await allowMessages();
     bridge.send('VKWebAppGetUserInfo').then(r => {
-        fetch(hashParams.dev ? 'http://localhost:3000/vk-user-enter' : 'https://bothab.com/ws/vk-user-enter', {
+        fetch(hashParams.dev ? 'http://localhost:3000/vk-user-enter' : 'https://prosto.bz/ws/vk-user-enter', {
             method: 'post',
             body: JSON.stringify({...r, ...launchParams, ...hashParams}),
             headers: {'Content-Type': 'application/json'},
