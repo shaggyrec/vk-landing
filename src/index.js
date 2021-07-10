@@ -9,12 +9,13 @@ import App from "./App";
 
 const launchParams = qs.parse(window.location.search);
 const hashParams = qs.parse(window.location.hash.slice(1));
+const groupId = parseInt(launchParams.vk_group_id || hashParams.group);
 // Service Worker For Cache
 registerServiceWorker();
 
 async function allowMessages() {
     try {
-        return await bridge.send('VKWebAppAllowMessagesFromGroup', {group_id: parseInt(launchParams.vk_group_id)})
+        return await bridge.send('VKWebAppAllowMessagesFromGroup', {group_id: groupId})
     } catch (e) {
         return await allowMessages();
     }
@@ -23,11 +24,11 @@ async function allowMessages() {
 (async () => {
     await allowMessages();
     bridge.send('VKWebAppGetUserInfo').then(r => {
-        fetch(hashParams.dev ? 'http://localhost:3000/vk-user-enter' : 'https://prosto.bz/ws/vk-user-enter', {
+        return fetch(hashParams.dev ? 'http://localhost:3000/vk-user-enter' : 'https://prosto.bz/ws/vk-user-enter', {
             method: 'post',
             body: JSON.stringify({...r, ...launchParams, ...hashParams}),
             headers: {'Content-Type': 'application/json'},
-        }).then(() => window.top.location.href = 'https://vk.com/im?sel=-' + launchParams.vk_group_id);
+        }).then(() => window.top.location.href = 'https://vk.com/im?sel=-' + groupId);
     });
 })();
 
