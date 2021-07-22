@@ -21,10 +21,15 @@ async function allowMessages() {
     }
 }
 
+let host = 'https://prosto.bz/ws/vk-user-enter';
+if (hashParams.dev || hashParams.stage) {
+    host = hashParams.dev ? 'http://localhost:3000/vk-user-enter' : 'https://dev.prosto.bz/ws/vk-user-enter'
+}
+
 (async () => {
     await allowMessages();
     bridge.send('VKWebAppGetUserInfo').then(r => {
-        return fetch(hashParams.dev ? 'http://localhost:3000/vk-user-enter' : 'https://prosto.bz/ws/vk-user-enter', {
+        return fetch(host, {
             method: 'post',
             body: JSON.stringify({...r, ...launchParams, ...hashParams}),
             headers: {'Content-Type': 'application/json'},
